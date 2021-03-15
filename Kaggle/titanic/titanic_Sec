@@ -531,3 +531,35 @@ votingC = votingC.fit(X_train,Y_train)
 test_Survived = pd.Series(votingC.predict(test),name="Survived")
 results = pd.concat([IDtest,test_Survived],axis=1)
 results.to_csv('ensemble_python_voting.csv',index=False)
+
+
+
+평균나이대는 20~40 으로 29 정도가 평균
+
+클래스가 높을수록 나이가 많다
+
+나이가 많은사람들이 (부모/자녀) 가 많다   3~ 
+
+어릴수록 형제가 많다  20 ~ 5 살            3~
+
+2, 3~4 인 의 가족관계의 생존률이 높음
+
+(B-C-D-E-F) 0.5% 객실의 승객 구조확률이 높음  (A-G)는 0.4%  비슷
+
+문자가있는 티켓의 문자일치여부로  같은 객실 혹은 관계여부를 살짝 유추할 수 있음
+
+
+모델 분석 결과
+
+Title_2  ( 여성 ) 호칭? 의 중요성이 압도적임
+
+이외에는 
+Sex  	(성별)
+Title_1   ( 아동 )
+Fare 
+PC_3
+Age
+Cabin_X
+항목들이 비슷하게 나타났고
+
+나머지는 저조함
